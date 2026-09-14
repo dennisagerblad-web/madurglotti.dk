@@ -1,0 +1,72 @@
+/** la la la 
+	la la la **/
+
+body { 
+	FONT-FAMILY: Arial, Helvetica, sans-serif, Verdana; 
+	COLOR: #FFFFFF; 
+	FONT-SIZE: 13px; 
+	FONT-WEIGHT: normal;
+} 
+
+ td { 
+	FONT-FAMILY: Arial, Helvetica, sans-serif, Verdana; 
+	COLOR: #FFFFFF; 
+	FONT-SIZE: 13px; 
+	FONT-WEIGHT: normal;
+ }
+ 
+  H1 { 
+	FONT-FAMILY: Arial, Helvetica, sans-serif, Verdana; 
+	COLOR: #FFFFFF; 
+	FONT-SIZE: 18px; 
+	FONT-WEIGHT: bold;
+ }
+
+ .skygge {
+	background-image:  url(kasse.gif);
+	background-repeat:no-repeat; 
+	margin: 0px; 
+} 
+
+A {
+
+	FONT-FAMILY: Arial, Helvetica, sans-serif, Verdana; 
+	COLOR: #FFFFFF;
+	FONT-WEIGHT: normal; 
+	TEXT-DECORATION: underline;
+	CURSOR: hand;
+}  
+
+A:visited { 
+	COLOR: #FFFFFF; 
+} 
+
+A:active { 
+	COLOR: #FFFFFF; 
+} 
+
+A:hover { 
+    COLOR: #FFFFFF; 
+	TEXT-DECORATION: none; 
+}
+
+input {
+    border: 1px solid #00FF00;
+    background: #FFFFFF;
+    margin: 0px;
+    height: 20px;
+}
+
+TEXTAREA{
+    border: 1px solid #00FF00;
+    background: #FFFFFF;
+    width: 250px;
+}
+
+.button {
+	COLOR: #000000;
+	font-weight : bold;
+	font-size : 10px;
+	background-color: #00FF00;
+	BORDER: #00FF00 1px solid;
+}

@@ -1,0 +1,158 @@
+
+          Anfy Mosaic - Copyright (C) by Fabio Ciucci 1998/99
+
+
+This applet can execute a tiling transition among any identically sized GIF 
+or JPG images.
+
+This applet is based on the original code by Ibon Tolosana that is used under
+a licence.
+
+The sample images used are by Fabio Ciucci.
+
+***************************************************************************
+
+NECESSARY FILES.
+
+As well as images for mosaix effect and a background and/or a foreground 
+images, the following 3 ".class" files must be uploaded: 
+
+mosaic.class
+Lware.class
+anfy.class
+
+Plus, mosaic.jar for speedy loading on recent browsers.
+
+**************************************************************************
+
+EXAMPLE.
+
+Insert the <applet></applet> tag in your html document as follows to add
+this applet to your page (Comments after the ";" symbol are code 
+descriptions and acceptable min/max values. They are not part of the applet
+language):
+
+
+<applet archive="mosaic.jar" code="mosaic.class" width="240" height="266">
+<param name="credits" value="Applet by Fabio Ciucci (www.anfyjava.com)">
+<param name="regcode" value="NO">          ; Registration code (if you have it)
+<param name="regnewframe" value="YES">     ; Reglink opened in new frame?
+<param name="regframename" value="_blank"> ; Name of new frame for reglink
+<param name="res" value="1">               ; resolution (1-8)
+<param name="image1" value="imfad1.gif">   ; Image 1 to load
+<param name="image2" value="imfad2.gif">   ; Image 2 to load
+<param name="image3" value="imfad3.gif">   ; Image 3 to load
+<param name="link1" value="http://www.anfyjava.com"> ; link 1
+<param name="link2" value="NO">                      ; link 2
+<param name="link3" value="NO">                      ; link 3
+<param name="statusmsg1" value="anfy 1"> ; statusbar msg on image 1
+<param name="statusmsg2" value="anfy 2"> ; statusbar msg on image 2
+<param name="statusmsg3" value="anfy 3"> ; statusbar msg on image 3
+<param name="pause" value="1500">        ; pause (value = milliseconds).
+<param name="tileswidth" value="8">    ; Num. of horizontal tiles
+<param name="tilesheight" value="10">  ; Num. of vertical tiles
+<param name="tilesteps" value="16">    ; Num. steps for tile rotation (8 .. 32)
+<param name="backimage" value="NO">    ; Optional background image
+<param name="backr" value="64">        ; Red in background (0 .. 255)
+<param name="backg" value="96">           ; Green in background (0 .. 255)
+<param name="backb" value="160">          ; Blue in background (0 .. 255)
+<param name="overimg" value="NO">         ; Optional image over applet
+<param name="overimgX" value="0">         ; Over image X offset
+<param name="overimgY" value="0">         ; Over image Y offset
+<param name="memdelay" value="1000">      ; Memory deallocation delay
+<param name="priority" value="3">          ; Task priority (1..10)
+<param name="MinSYNC" value="10">          ; Min. milliseconds/frame for sync
+Sorry, your browser doesn't support Java ; Msg in no java browsers
+</applet>
+
+********************************************************************
+
+INSTRUCTIONS.
+
+
+The following instructions describe how to change parameters:
+
+The images (GIF and/or JPG) can be of any size, but all image dimensions
+must be identical.
+
+Attempting to change the credits parameter will disable the applet.
+To activate the reg parameters read the shareware registration notes.
+In the "regcode" parameter, place the registration code you purchased
+from the author. If the code is correct and the applet is run from the
+registered domain name, you can use "link" parameters to link to a URL
+when the applet is "clicked".
+
+If you set "regnewframe" to "YES", you can specify a specific frame 
+location for the reglink:
+
+"_blank"  : To load the link in a new blank unnamed browser window.
+"_self"   : To load the link into the same window the applet occupies.
+"_parent" : To load the link into the immediate FRAMESET parent.
+"_top"    : To load the link into the top body of the window.
+
+You can also set a custom frame name, such as "myframe1".
+
+With the "overimg" parameter you can specify the name of an image that will
+be painted over the applet. The best options are transparent GIF images.
+NOTE: Animated GIF images are supported, but will be animated only on 
+latest browsers (Netscape 4 and Explorer 4 or newer).
+
+With "overimgX" and "overimgY" you can center the image over the applet 
+area.
+
+Applet size is determined by "res": "res=1" shows the graphic at natural 
+size, "res=2" shows it at double size, etc.
+
+It is important to update the width and height tags, otherwise the applet
+will not display properly on browsers.
+
+You must set the applet size a bit greater than images size, since tiles
+rotation needs extra space.
+
+The Anfy Java wizard calculates automatically the extra offset needed.
+
+The number of images to have in the tiling slideshow is unlimited, but
+the minimum is 2.
+
+If you want to tile between just 2 images, type:
+
+<param name=image1 value="imfad1.gif">
+<param name=image2 value="imfad2.gif">
+
+If you want to tile between 3 images, type:
+
+<param name=image1 value="imfad1.gif">
+<param name=image2 value="imfad2.gif">
+<param name=image3 value="imfad3.gif">
+
+Repeat the code for each image. 
+
+You can change the displayed message for each image in the "statusmsg"
+code. "Statusmsg1" is the message displayed in the first image, 
+"statusmsg2" the second image, etc.
+
+When you purchase and register the applet, the "link1","link2", etc.
+parameters will be enabled and this applet can become a mosaic banner as
+follows:
+
+<param name=link1 value="http://(name of link">
+<param name=link2 value="http://(name of link">
+
+You can place a URL link related to each image.
+
+The pause, in milliseconds, determines the "hold" time for images between
+the fades.
+
+With "tileswidth" and "tilesheight" you can change the number of horizontal
+and vertical tiles.
+
+With "tilesteps" (values from 8 to 32) you can change the rotation speed of
+tiles.
+
+With "backr", "backg" and "backb" parameters, you can control the RED, GREEN
+and BLUE components of the background colour.
+
+You can optionally load a background image, placing its name on the
+"backimage" parameter. This image must be the same size as the applet if
+res=1. If it is res=2, it must be half the size of the applet, and so on.
+

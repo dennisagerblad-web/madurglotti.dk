@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Language" CONTENT="en-us">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="robots" CONTENT="noindex,nofollow">
+<LINK REL="stylesheet" TYPE="text/css" HREF="nyhedsbrev.css">
+<TITLE>Nyhedbrev</TITLE>
+</HEAD>
+
+<BODY>
+
+
+<FORM METHOD="post" ACTION="../cgi-bin/FormMail.pl" NAME="theForm">
+<INPUT TYPE="hidden" NAME="recipient" VALUE="nyhedsbrev@madurglotti.dk">
+<INPUT TYPE="hidden" NAME="subject" VALUE="nyhedsbrev">
+<INPUT TYPE="hidden" NAME="redirect" VALUE="../newsletter/thanks.html">
+<P><INPUT TYPE="text" CLASS="news" VALUE="&nbsp;your name" NAME="name" onFocus="this.value=''" onBlur="if(this.value=='')this.value='&nbsp;your name';"></P>
+<P><SELECT NAME="language" SIZE="1">
+<OPTION>Select preferred language</OPTION>
+<OPTION>F�royskt</OPTION>
+<OPTION>Dansk</OPTION>
+<OPTION>Engish</OPTION>
+</SELECT></P>
+<P><INPUT TYPE="text" CLASS="news" VALUE="&nbsp;e-mail" NAME="email" onFocus="this.value=''" onBlur="if(this.value=='')this.value='&nbsp;email';">
+<P><INPUT TYPE="submit" CLASS="submit" VALUE="SUBMIT!"></P>
+</FORM>
+
+
+</BODY>
+</HTML>
