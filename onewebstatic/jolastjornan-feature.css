@@ -3,9 +3,9 @@
   isolation: isolate;
   display: grid;
   align-items: center;
-  width: min(100%, 1100px);
+  width: 100vw;
   min-height: 280px;
-  margin-inline: auto;
+  margin: 0;
   overflow: hidden;
   background: #15202b url('../onewebmedia/jolastjornan-bg-01-2200.jpg') center / cover no-repeat;
   color: #fff;
