@@ -1,0 +1,149 @@
+.jolastjornan-feature {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  width: min(100%, 1100px);
+  min-height: 280px;
+  margin-inline: auto;
+  overflow: hidden;
+  background: #15202b url('../onewebmedia/jolastjornan-bg-01-2200.jpg') center / cover no-repeat;
+  color: #fff;
+  font-family: Lato, Arial, sans-serif;
+}
+
+.jolastjornan-feature__background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: block;
+  pointer-events: none;
+}
+
+.jolastjornan-feature::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 50%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.jolastjornan-feature__content {
+  position: relative;
+  z-index: 3;
+  width: min(100% - 44px, 640px);
+  margin: 0 auto;
+  padding: 22px 0;
+  display: grid;
+  grid-template-columns: 185px minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+}
+
+.jolastjornan-feature__cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  box-shadow: 0 20px 60px rgb(0 0 0 / 36%);
+}
+
+.jolastjornan-feature__message {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+  padding: 15px 18px;
+  border-radius: 18px;
+  background: rgb(0 0 0 / 72%);
+  color: #fff;
+  font-size: clamp(24px, 2.5vw, 30px);
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: none;
+}
+
+.jolastjornan-feature__listen {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 10px;
+  padding: 12px 17px;
+  border-radius: 14px;
+  background: #000;
+  color: #fff !important;
+  font-size: 16px;
+  line-height: 1.2;
+  text-decoration: none !important;
+  text-transform: none;
+  box-shadow: 0 12px 30px rgb(0 0 0 / 28%);
+}
+
+.jolastjornan-feature__listen:hover {
+  background: #202020;
+}
+
+.jolastjornan-feature__listen:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+.mobileV .jolastjornan-feature {
+  min-height: 355px;
+}
+
+.mobileV .jolastjornan-feature__content {
+    width: min(calc(100% - 36px), 430px);
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 14px;
+    padding: 20px 0;
+}
+
+.mobileV .jolastjornan-feature__cover {
+    width: min(50vw, 160px);
+}
+
+.mobileV .jolastjornan-feature__copy {
+    width: 100%;
+    text-align: center;
+}
+
+.mobileV .jolastjornan-feature__message {
+    max-width: 100%;
+    padding: 15px 18px;
+    font-size: clamp(22px, 5vw, 27px);
+}
+
+@media (max-width: 700px) {
+  .jolastjornan-feature {
+    width: 100vw;
+    min-width: 0;
+    min-height: 355px;
+  }
+
+  .jolastjornan-feature__content {
+    width: min(calc(100% - 36px), 430px);
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 14px;
+    padding: 20px 0;
+  }
+
+  .jolastjornan-feature__cover {
+    width: min(50vw, 160px);
+  }
+
+  .jolastjornan-feature__copy {
+    width: 100%;
+    text-align: center;
+  }
+
+  .jolastjornan-feature__message {
+    max-width: 100%;
+    padding: 15px 18px;
+    font-size: clamp(22px, 5vw, 27px);
+  }
+}
