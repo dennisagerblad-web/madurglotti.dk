@@ -1,0 +1,149 @@
+.madur-tracklist__label {
+  font-size: 12px;
+}
+
+.madur-tracklist ol {
+  margin: 5px 0 0;
+  padding-left: 2em;
+  overflow: visible;
+}
+
+.madur-tracklist li {
+  margin: 0 0 3px;
+}
+
+/* The legacy desktop builder keeps a 1202px canvas below its mobile breakpoint. */
+@media (min-width: 701px) and (max-width: 1201px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  .desktopV .template,
+  .desktopV #wsb-mobile-header {
+    width: 100vw;
+  }
+
+  .desktopV .template > .row {
+    width: 1202px !important;
+    zoom: var(--madur-page-zoom, 0.7);
+  }
+
+  .desktopV .template > .row:has(#Header) {
+    display: none;
+  }
+
+  .desktopV #wsb-mobile-header {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .jolastjornan-feature {
+    min-height: 0;
+  }
+
+  .jolastjornan-feature__cover,
+  .mobileV .jolastjornan-feature__cover {
+    width: 100%;
+  }
+
+  .jolastjornan-feature__content,
+  .mobileV .jolastjornan-feature__content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .mobileV #Konsertir > .StripPreview_backgroundComponent__3YmQM > .extraContainer,
+  .mobileV #STEV > .StripPreview_backgroundComponent__3YmQM > .extraContainer,
+  .mobileV #Stakløg > .StripPreview_backgroundComponent__3YmQM > .extraContainer,
+  .mobileV #Diskografi > .StripPreview_backgroundComponent__3YmQM > .extraContainer {
+    padding-top: 65px;
+    padding-bottom: 82px;
+  }
+
+  .mobileV #okkum > .StripPreview_backgroundComponent__3YmQM > .extraContainer {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .mobileV #STEV [data-id="1C2143EF-5C2E-4DED-AEFD-FDD55CB5D18C"] .extraContainer,
+  .mobileV #Stakløg [data-id="6E272857-3455-404F-8B69-C03905883BB8"] .extraContainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px 12px;
+  }
+
+  .mobileV #STEV [data-id="1C2143EF-5C2E-4DED-AEFD-FDD55CB5D18C"] .extraContainer > .extra:first-child,
+  .mobileV #Stakløg [data-id="6E272857-3455-404F-8B69-C03905883BB8"] .extraContainer > .extra:nth-child(-n + 8) {
+    grid-column: 1 / -1;
+  }
+
+  .mobileV #STEV [data-id="1C2143EF-5C2E-4DED-AEFD-FDD55CB5D18C"] .extraContainer > .extra:nth-child(n + 2),
+  .mobileV #Stakløg [data-id="6E272857-3455-404F-8B69-C03905883BB8"] .extraContainer > .extra:nth-child(n + 9) {
+    min-width: 0;
+    margin-top: 0 !important;
+  }
+
+  .mobileV .madur-tracklist__columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .mobileV .madur-tracklist ol {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 550px) and (max-width: 1000px) {
+  .jolastjornan-feature,
+  .mobileV .jolastjornan-feature {
+    min-height: 0;
+  }
+
+  .jolastjornan-feature__content,
+  .mobileV .jolastjornan-feature__content {
+    width: min(620px, calc(100% - 28px));
+    grid-template-columns: 140px minmax(0, 1fr);
+    justify-items: stretch;
+    gap: 16px;
+    padding: 60px 0;
+  }
+
+  .jolastjornan-feature__cover,
+  .mobileV .jolastjornan-feature__cover {
+    width: 140px;
+  }
+
+  .jolastjornan-feature__copy,
+  .mobileV .jolastjornan-feature__copy {
+    width: auto;
+    text-align: left;
+  }
+
+  .jolastjornan-feature__message,
+  .mobileV .jolastjornan-feature__message {
+    padding: 12px 15px;
+    font-size: clamp(19px, 3vw, 25px);
+  }
+
+  .jolastjornan-feature__listen {
+    margin-top: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .mobileV #Konsertir > .StripPreview_backgroundComponent__3YmQM > .extraContainer,
+  .mobileV #STEV > .StripPreview_backgroundComponent__3YmQM > .extraContainer,
+  .mobileV #Stakløg > .StripPreview_backgroundComponent__3YmQM > .extraContainer,
+  .mobileV #Diskografi > .StripPreview_backgroundComponent__3YmQM > .extraContainer {
+    padding-top: 25px;
+    padding-bottom: 42px;
+  }
+
+  .mobileV #okkum > .StripPreview_backgroundComponent__3YmQM > .extraContainer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
