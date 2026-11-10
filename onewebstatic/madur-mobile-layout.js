@@ -3,9 +3,18 @@
   var layoutSwitchTimer;
 
   function fitLegacyCanvas() {
+    var pageZoom = Math.min(1, window.innerWidth / 1202);
     document.documentElement.style.setProperty(
       '--madur-page-zoom',
-      String(Math.min(1, window.innerWidth / 1202))
+      String(pageZoom)
+    );
+    document.documentElement.style.setProperty(
+      '--madur-landscape-content-zoom',
+      String((window.innerWidth - 41) / window.innerWidth)
+    );
+    document.documentElement.style.setProperty(
+      '--madur-landscape-content-margin',
+      String(21 / pageZoom) + 'px'
     );
   }
 

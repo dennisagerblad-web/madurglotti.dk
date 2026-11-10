@@ -13,7 +13,7 @@
 }
 
 /* The legacy desktop builder keeps a 1202px canvas below its mobile breakpoint. */
-@media (min-width: 701px) and (max-width: 1201px) {
+@media (min-width: 651px) and (max-width: 1201px) {
   html {
     overflow-x: hidden;
   }
@@ -34,6 +34,22 @@
 
   .desktopV #wsb-mobile-header {
     display: block;
+  }
+}
+
+/* Keep the strip images full width while fitting the old canvas inside the gutters. */
+@media (min-width: 651px) and (max-width: 1000px) and (orientation: landscape) and (max-height: 550px) {
+  .desktopV :is(#Konsertir, #STEV, #Stakløg, #okkum)
+    > .StripPreview_backgroundComponent__3YmQM
+    > .Preview_column__1KeVx {
+    zoom: var(--madur-landscape-content-zoom, 0.95);
+    margin-right: 0 !important;
+    margin-left: var(--madur-landscape-content-margin, 28px) !important;
+  }
+
+  .desktopV :is(#Konsertir, #STEV, #Stakløg, #okkum)
+    :is(.BackgroundPreview_backgroundComponent__3Dr5e, .Mobile_imageComponent__QXWk1) {
+    transform: none !important;
   }
 }
 
@@ -145,5 +161,36 @@
   .mobileV #okkum > .StripPreview_backgroundComponent__3YmQM > .extraContainer {
     padding-top: 25px;
     padding-bottom: 25px;
+  }
+
+  .mobileV :is(#Konsertir, #STEV, #Stakløg, #okkum)
+    > .StripPreview_backgroundComponent__3YmQM
+    > .extraContainer
+    > .extra
+    > .mobile-moved {
+    box-sizing: border-box;
+    width: calc(100% - 40px) !important;
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .mobileV :is(#Konsertir, #STEV, #Stakløg, #okkum)
+    > .StripPreview_backgroundComponent__3YmQM
+    > .extraContainer
+    > .extra
+    > .mobile-moved
+    > .BackgroundPreview_backgroundComponent__3Dr5e {
+    box-sizing: border-box;
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+
+  .mobileV :is(#Konsertir, #STEV, #Stakløg, #okkum)
+    .ButtonPreview_container__22hQi {
+    transform: none !important;
   }
 }
